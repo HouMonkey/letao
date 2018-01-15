@@ -50,12 +50,8 @@
 <!--乐淘主体区域-->
 <div class="lt_main">
   <div class="lt_header">
-    <a href="javascript:;" class="pull-left icon_menu">
-      <span class="glyphicon glyphicon-align-justify"></span>
-    </a>
-    <a href="javascript:;" class="pull-right icon_logout">
-      <span class="glyphicon glyphicon-log-out"></span>
-    </a>
+    <a href="javascript:;" class="pull-left icon_menu"><span class="glyphicon glyphicon-align-justify"></span></a>
+    <a href="javascript:;" class="pull-right icon_logout"><span class="glyphicon glyphicon-log-out"></span></a>
   </div>
   <div class="container-fluid">
     <!--路径导航-->
@@ -100,10 +96,7 @@
         <h4 class="modal-title">温馨提示</h4>
       </div>
       <div class="modal-body">
-        <p class="text-danger">
-          <span class="glyphicon glyphicon-info-sign"></span>
-          您确定要退出后台管理系统嘛？
-        </p>
+        <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span>您确定要退出后台管理系统吗？</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -118,16 +111,11 @@
   <div class="modal-dialog modal-sm">
     <div class="modal-content">
       <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal">
-          <span>&times;</span>
-        </button>
+        <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
         <h4 class="modal-title">温馨提示</h4>
       </div>
       <div class="modal-body">
-        <p class="text-danger">
-          <span class="glyphicon glyphicon-info-sign"></span>
-          您是否要执行此操作？
-        </p>
+        <p class="text-danger"><span class="glyphicon glyphicon-info-sign"></span>你是否要执行此操作？</p>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
@@ -141,14 +129,14 @@
 <script type="text/html" id="tpl">
   {{each rows v i}}
   <tr>
-    <td>{{ (page - 1) * size + i + 1}}</td>
+    <td>{{ (page-1)*size + i+1}}</td>
     <td>{{v.username}}</td>
     <td>{{v.mobile}}</td>
-    <td>{{v.isDelete== '1'?'正常':'禁用'}}</td>
+    <td>{{v.isDelete=='1'?'正常':'禁用'}}</td>
     <td data-id="{{v.id}}">
-      {{if v.isDelete== '0'}}
+      {{if v.isDelete=='0'}}
       <button class="btn btn-success btn-sm">启用</button>
-      {{else if v.isDelete== '1'}}
+      {{else if v.isDelete=='1'}}
       <button class="btn btn-danger btn-sm">禁用</button>
       {{/if}}
     </td>
